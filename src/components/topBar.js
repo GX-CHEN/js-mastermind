@@ -18,13 +18,13 @@ const styles = {
 };
 
 function ButtonAppBar(props) {
-  const { classes } = props;
+  const { classes, toggleSidebar } = props;
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-            <MenuIcon />
+            <MenuIcon onClick={toggleSidebar(true)} />
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.grow} />
           <Button color="inherit">Login</Button>
@@ -34,6 +34,9 @@ function ButtonAppBar(props) {
   );
 }
 
-ButtonAppBar.propTypes = { classes: PropTypes.object.isRequired };
+ButtonAppBar.propTypes = {
+  classes: PropTypes.object.isRequired,
+  toggleSidebar: PropTypes.func.isRequired,
+};
 
 export default withStyles(styles)(ButtonAppBar);

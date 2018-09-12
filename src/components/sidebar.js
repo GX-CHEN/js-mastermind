@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import { mailFolderListItems, otherMailFolderListItems } from './tileData';
@@ -15,13 +14,8 @@ const styles = {
 class TemporaryDrawer extends React.Component {
   state = { left: false };
 
-  toggleDrawer = (side, open) => () => {
-    this.setState({ [side]: open });
-  };
-
   render() {
-    const { classes } = this.props;
-    const { left } = this.state;
+    const { classes, sidebarOpen, toggleSidebar } = this.props;
 
     const sideList = (
       <div className={classes.list}>
@@ -33,14 +27,8 @@ class TemporaryDrawer extends React.Component {
 
     return (
       <div>
-        <Button onClick={this.toggleDrawer('left', true)}>Open Left</Button>
-        <Drawer open={left} onClose={this.toggleDrawer('left', false)}>
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer('left', false)}
-            onKeyDown={this.toggleDrawer('left', false)}
-          >
+        <Drawer open={sidebarOpen} onClose={toggleSidebar(false)}>
+          <div tabIndex={0} role="button" onClick={toggleSidebar(false)} onKeyDown={toggleSidebar(false)}>
             {sideList}
           </div>
         </Drawer>
@@ -49,6 +37,10 @@ class TemporaryDrawer extends React.Component {
   }
 }
 
-TemporaryDrawer.propTypes = { classes: PropTypes.object.isRequired };
+TemporaryDrawer.propTypes = {
+  classes: PropTypes.object.isRequired,
+  toggleSidebar: PropTypes.func.isRequired,
+  sidebarOpen: PropTypes.bool.isRequired,
+};
 
 export default withStyles(styles)(TemporaryDrawer);
