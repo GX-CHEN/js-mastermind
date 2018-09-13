@@ -4,7 +4,6 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
@@ -23,25 +22,62 @@ const styles = {
   },
 };
 
-function ButtonAppBar(props) {
-  const { classes, toggleSidebar, selectedName } = props;
-  return (
-    <div className={classes.root}>
-      <AppBar position="sticky">
-        <Toolbar>
-          <IconButton onClick={toggleSidebar(true)} className={classes.menuButton} color="inherit" aria-label="Menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="title" color="inherit" className={classes.topBarTitle}>
-            {selectedName}
-          </Typography>
-          <IconButton aria-label="More" color="inherit" aria-haspopup="true">
-            <MoreVertIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
+class ButtonAppBar extends React.Component {
+  state = { anchorEl: null };
+
+  handleClick = event => {
+    this.setState({ anchorEl: event.currentTarget });
+  };
+
+  handleClose = () => {
+    this.setState({ anchorEl: null });
+  };
+
+  render() {
+    const { anchorEl } = this.state;
+    const open = Boolean(anchorEl);
+    const { classes, toggleSidebar, selectedName } = this.props;
+    return (
+      <div className={classes.root}>
+        <AppBar position="sticky">
+          <Toolbar>
+            <IconButton onClick={toggleSidebar(true)} className={classes.menuButton} color="inherit" aria-label="Menu">
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="title" color="inherit" className={classes.topBarTitle}>
+              {selectedName}
+            </Typography>
+            <IconButton
+              aria-label="More"
+              color="inherit"
+              aria-haspopup="true"
+              aria-owns={open ? 'long-menu' : null}
+              onClick={this.handleClick}
+            >
+              <MoreVertIcon />
+            </IconButton>
+          </Toolbar>
+          <Menu
+            id="long-menu"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={this.handleClose}
+            PaperProps={{ style: { width: 200 } }}
+          >
+            <MenuItem key="code-source" onClick={() => window.open('https://github.com/GX-CHEN', '_blank')}>
+              Code (on Github)
+            </MenuItem>
+            <MenuItem
+              key="email"
+              onClick={() => window.open('mailto:chengongxia1990@gmail.com?Subject=Hello%20Gongxia', '_top')}
+            >
+              Email Me
+            </MenuItem>
+          </Menu>
+        </AppBar>
+      </div>
+    );
+  }
 }
 
 ButtonAppBar.propTypes = {
