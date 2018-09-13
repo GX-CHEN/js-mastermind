@@ -36,7 +36,7 @@ class App extends React.Component {
           names={names}
         />
         <Iframe
-          height="100%"
+          height="calc(100% - 64px)"
           width="100%"
           url={`https://repl.it/@GX_CHEN/${uriMap[selectedName]}?lite=true`}
           scrolling="no"

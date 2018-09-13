@@ -7,10 +7,16 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const styles = {
   root: { flexGrow: 1 },
-  grow: { flexGrow: 1 },
+  topBarTitle: {
+    flexGrow: 1,
+    textAlign: 'center',
+  },
   menuButton: {
     marginLeft: -12,
     marginRight: 20,
@@ -26,10 +32,12 @@ function ButtonAppBar(props) {
           <IconButton onClick={toggleSidebar(true)} className={classes.menuButton} color="inherit" aria-label="Menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="title" color="inherit" className={classes.grow}>
+          <Typography variant="title" color="inherit" className={classes.topBarTitle}>
             {selectedName}
           </Typography>
-          <Button color="inherit">G Chen</Button>
+          <IconButton aria-label="More" color="inherit" aria-haspopup="true">
+            <MoreVertIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </div>

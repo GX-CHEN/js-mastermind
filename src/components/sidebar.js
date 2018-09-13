@@ -7,7 +7,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
 const styles = {
-  list: { width: 250 },
+  list: { width: 260 },
   fullList: { width: 'auto' },
 };
 
