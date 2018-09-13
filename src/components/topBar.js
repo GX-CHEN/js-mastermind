@@ -39,7 +39,7 @@ function ButtonAppBar(props) {
 ButtonAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
   toggleSidebar: PropTypes.func.isRequired,
-  selectedName: PropTypes.string,
+  selectedName: PropTypes.string.isRequired,
 };
 
 export default withStyles(styles)(ButtonAppBar);

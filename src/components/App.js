@@ -2,7 +2,6 @@ import React from 'react';
 import Iframe from 'react-iframe';
 import Sidebar from './sidebar';
 import TopBar from './topBar';
-import '../App.css';
 import uriData from '../data/uriData.json';
 import { generateMapFromUriData, getNamesFromUriData } from '../util/processUriMap';
 

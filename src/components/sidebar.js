@@ -11,34 +11,30 @@ const styles = {
   fullList: { width: 'auto' },
 };
 
-class SideBar extends React.Component {
-  state = { left: false };
+function SideBar(props) {
+  const { classes, sidebarOpen, toggleSidebar, updateSelectedName, names } = props;
 
-  render() {
-    const { classes, sidebarOpen, toggleSidebar, updateSelectedName, names } = this.props;
-
-    const sideList = (
-      <div className={classes.list}>
-        <div>
-          {names.map(name => (
-            <ListItem button key={name} onClick={updateSelectedName(name)}>
-              <ListItemText primary={name} />
-            </ListItem>
-          ))}
-        </div>
-      </div>
-    );
-
-    return (
+  const sideList = (
+    <div className={classes.list}>
       <div>
-        <Drawer open={sidebarOpen} onClose={toggleSidebar(false)}>
-          <div tabIndex={0} role="button" onClick={toggleSidebar(false)} onKeyDown={toggleSidebar(false)}>
-            {sideList}
-          </div>
-        </Drawer>
+        {names.map(name => (
+          <ListItem button key={name} onClick={updateSelectedName(name)}>
+            <ListItemText primary={name} />
+          </ListItem>
+        ))}
       </div>
-    );
-  }
+    </div>
+  );
+
+  return (
+    <div>
+      <Drawer open={sidebarOpen} onClose={toggleSidebar(false)}>
+        <div tabIndex={0} role="button" onClick={toggleSidebar(false)} onKeyDown={toggleSidebar(false)}>
+          {sideList}
+        </div>
+      </Drawer>
+    </div>
+  );
 }
 
 SideBar.propTypes = {
