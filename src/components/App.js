@@ -4,13 +4,16 @@ import Sidebar from './sidebar';
 import TopBar from './topBar';
 import '../App.css';
 import uriData from '../data/uriData.json';
+import { generateMapFromUriData, getNamesFromUriData } from '../util/processUriMap';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       sidebarOpen: true,
-      uriData,
+      names: getNamesFromUriData(uriData),
+      uriMap: generateMapFromUriData(uriData),
+      selectedName: uriData[0].name,
     };
   }
 
@@ -18,16 +21,25 @@ class App extends React.Component {
     this.setState({ sidebarOpen: open });
   };
 
+  updateSelectedName = selectedName => () => {
+    this.setState({ selectedName });
+  };
+
   render() {
-    const { sidebarOpen } = this.state;
+    const { sidebarOpen, names, uriMap, selectedName } = this.state;
     return (
       <div className="App">
         <TopBar toggleSidebar={this.toggleSidebar} />
-        <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={this.toggleSidebar} />
+        <Sidebar
+          sidebarOpen={sidebarOpen}
+          toggleSidebar={this.toggleSidebar}
+          updateSelectedName={this.updateSelectedName}
+          names={names}
+        />
         <Iframe
           height="100%"
           width="100%"
-          url="https://repl.it/@GX_CHEN/arraypushpopshiftunshift?lite=true"
+          url={`https://repl.it/@GX_CHEN/${uriMap[selectedName]}?lite=true`}
           scrolling="no"
           frameborder="no"
           allowtransparency="true"

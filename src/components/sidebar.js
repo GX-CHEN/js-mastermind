@@ -2,26 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import { mailFolderListItems, otherMailFolderListItems } from './tileData';
+
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 
 const styles = {
   list: { width: 250 },
   fullList: { width: 'auto' },
 };
 
-class TemporaryDrawer extends React.Component {
+class SideBar extends React.Component {
   state = { left: false };
 
   render() {
-    const { classes, sidebarOpen, toggleSidebar } = this.props;
+    const { classes, sidebarOpen, toggleSidebar, updateSelectedName, names } = this.props;
 
     const sideList = (
       <div className={classes.list}>
-        <List>{mailFolderListItems}</List>
-        <Divider />
-        <List>{otherMailFolderListItems}</List>
+        <div>
+          {names.map(name => (
+            <ListItem button key={name} onClick={updateSelectedName(name)}>
+              <ListItemText primary={name} />
+            </ListItem>
+          ))}
+        </div>
       </div>
     );
 
@@ -37,10 +41,12 @@ class TemporaryDrawer extends React.Component {
   }
 }
 
-TemporaryDrawer.propTypes = {
+SideBar.propTypes = {
   classes: PropTypes.object.isRequired,
   toggleSidebar: PropTypes.func.isRequired,
+  updateSelectedName: PropTypes.func.isRequired,
   sidebarOpen: PropTypes.bool.isRequired,
+  names: PropTypes.array.isRequired,
 };
 
-export default withStyles(styles)(TemporaryDrawer);
+export default withStyles(styles)(SideBar);

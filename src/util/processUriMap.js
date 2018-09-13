@@ -1,6 +1,6 @@
 export function generateMapFromUriData(uriData) {
   const uriMap = {};
-  uriData.forEach((item) => {
+  uriData.forEach(item => {
     uriMap[item.name] = item.uri;
   });
   return uriMap;
