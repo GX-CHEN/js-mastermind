@@ -21,10 +21,10 @@ function ButtonAppBar(props) {
   const { classes, toggleSidebar } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="sticky">
         <Toolbar>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-            <MenuIcon onClick={toggleSidebar(true)} />
+          <IconButton onClick={toggleSidebar(true)} className={classes.menuButton} color="inherit" aria-label="Menu">
+            <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.grow} />
           <Button color="inherit">Login</Button>

@@ -3,13 +3,14 @@ import Iframe from 'react-iframe';
 import Sidebar from './sidebar';
 import TopBar from './topBar';
 import '../App.css';
+import uriData from '../data/uriData.json';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sidebarOpen: false,
-      selectedItem: null,
+      sidebarOpen: true,
+      uriData,
     };
   }
 
@@ -26,7 +27,7 @@ class App extends React.Component {
         <Iframe
           height="100%"
           width="100%"
-          url="https://repl.it/@GX_CHEN/for-inandfor-ofloop?lite=true"
+          url="https://repl.it/@GX_CHEN/arraypushpopshiftunshift?lite=true"
           scrolling="no"
           frameborder="no"
           allowtransparency="true"
