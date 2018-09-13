@@ -29,7 +29,7 @@ class App extends React.Component {
     const { sidebarOpen, names, uriMap, selectedName } = this.state;
     return (
       <div className="App">
-        <TopBar toggleSidebar={this.toggleSidebar} />
+        <TopBar toggleSidebar={this.toggleSidebar} selectedName={selectedName} />
         <Sidebar
           sidebarOpen={sidebarOpen}
           toggleSidebar={this.toggleSidebar}

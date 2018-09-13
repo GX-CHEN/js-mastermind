@@ -18,7 +18,7 @@ const styles = {
 };
 
 function ButtonAppBar(props) {
-  const { classes, toggleSidebar } = props;
+  const { classes, toggleSidebar, selectedName } = props;
   return (
     <div className={classes.root}>
       <AppBar position="sticky">
@@ -26,8 +26,10 @@ function ButtonAppBar(props) {
           <IconButton onClick={toggleSidebar(true)} className={classes.menuButton} color="inherit" aria-label="Menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="title" color="inherit" className={classes.grow} />
-          <Button color="inherit">Login</Button>
+          <Typography variant="title" color="inherit" className={classes.grow}>
+            {selectedName}
+          </Typography>
+          <Button color="inherit">G Chen</Button>
         </Toolbar>
       </AppBar>
     </div>
@@ -37,6 +39,7 @@ function ButtonAppBar(props) {
 ButtonAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
   toggleSidebar: PropTypes.func.isRequired,
+  selectedName: PropTypes.string,
 };
 
 export default withStyles(styles)(ButtonAppBar);
