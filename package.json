@@ -1,7 +1,7 @@
 {
   "name": "javascriptic-js",
   "version": "0.1.0",
-  "homepage": "https://gx-chen.github.io/javascriptic-js/",
+  "homepage": "https://gx-chen.github.io/javascriptic-js",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.0.3",
