@@ -10,8 +10,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       sidebarOpen: true,
-      uriArray: setSelectedItem(uriData['ES5'], uriData['ES5'][0].name),
-      uriMap: generateMapFromUriData(uriData['ES5']),
+      uriES5Array: setSelectedItem(uriData['ES5'], uriData['ES5'][0].name),
+      uriES6Array: setSelectedItem(uriData['ES6'], uriData['ES6'][0].name),
+      uriMap: { ...generateMapFromUriData(uriData['ES5']), ...generateMapFromUriData(uriData['ES6']) },
       selectedName: uriData['ES5'][0].name,
     };
   }
@@ -21,12 +22,16 @@ class App extends React.Component {
   };
 
   updateSelectedName = selectedName => () => {
-    const { uriArray } = this.state;
-    this.setState({ selectedName, uriArray: setSelectedItem(uriArray, selectedName) });
+    const { uriES5Array, uriES6Array } = this.state;
+    this.setState({
+      selectedName,
+      uriES5Array: setSelectedItem(uriES5Array, selectedName),
+      uriES6Array: setSelectedItem(uriES6Array, selectedName),
+    });
   };
 
   render() {
-    const { sidebarOpen, uriArray, uriMap, selectedName } = this.state;
+    const { sidebarOpen, uriES5Array, uriES6Array, uriMap, selectedName } = this.state;
     return (
       <div className="App">
         <TopBar toggleSidebar={this.toggleSidebar} selectedName={selectedName} />
@@ -34,7 +39,8 @@ class App extends React.Component {
           sidebarOpen={sidebarOpen}
           toggleSidebar={this.toggleSidebar}
           updateSelectedName={this.updateSelectedName}
-          uriArray={uriArray}
+          uriES5Array={uriES5Array}
+          uriES6Array={uriES6Array}
         />
         <Iframe
           height="calc(100% - 64px)"

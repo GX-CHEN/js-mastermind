@@ -13,12 +13,17 @@ const styles = {
 };
 
 function SideBar(props) {
-  const { classes, sidebarOpen, toggleSidebar, updateSelectedName, uriArray } = props;
+  const { classes, sidebarOpen, toggleSidebar, updateSelectedName, uriES5Array, uriES6Array } = props;
 
   const sideList = (
     <div className={classes.list}>
       <div>
-        {uriArray.map(item => (
+        {uriES5Array.map(item => (
+          <ListItem button key={item.name} onClick={updateSelectedName(item.name)} selected={item.selected}>
+            <ListItemText primary={item.name} />
+          </ListItem>
+        ))}
+        {uriES6Array.map(item => (
           <ListItem button key={item.name} onClick={updateSelectedName(item.name)} selected={item.selected}>
             <ListItemText primary={item.name} />
           </ListItem>
@@ -43,7 +48,8 @@ SideBar.propTypes = {
   toggleSidebar: PropTypes.func.isRequired,
   updateSelectedName: PropTypes.func.isRequired,
   sidebarOpen: PropTypes.bool.isRequired,
-  uriArray: PropTypes.array.isRequired,
+  uriES5Array: PropTypes.array.isRequired,
+  uriES6Array: PropTypes.array.isRequired,
 };
 
 export default withStyles(styles)(SideBar);
