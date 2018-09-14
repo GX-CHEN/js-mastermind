@@ -1,10 +1,10 @@
 [
-  { "name": "Array basic APIs", "uri": "arraypushpopshiftunshift" },
+  { "name": "Array Basic APIs", "uri": "arraypushpopshiftunshift" },
   { "name": "Slice vs Splice", "uri": "arrayslicesplice" },
   { "name": "setTimeOut", "uri": "setTimeOut" },
   { "name": "Closure Scope", "uri": "closurescope" },
   { "name": "Closure Function Factory", "uri": "closurefunctionfactory" },
-  { "name": "Closure Count Function Calls", "uri": "closurecountfunctioncalls" },
+  { "name": "Closure Count Func Calls", "uri": "closurecountfunctioncalls" },
   { "name": "Apply Call Bind", "uri": "applycallbind" },
   { "name": "Function Chaining", "uri": "functionchaining" },
   { "name": "Function Overload", "uri": "functionoverload" },
@@ -17,10 +17,10 @@
   { "name": "Function Are Objects", "uri": "functionareobjects" },
   { "name": "Object Key", "uri": "objectkey" },
   { "name": "Object Literal", "uri": "objectliteral" },
-  { "name": "This Keyword in Object", "uri": "thiskeywordinobject" },
+  { "name": "This Keyword In Object", "uri": "thiskeywordinobject" },
   { "name": "3 Ways Create Object", "uri": "threewayforobjectcreation" },
   { "name": "Enhanced ES6 Class", "uri": "enhancedes6class" },
-  { "name": "full ES5 Scope", "uri": "fulles5oop" },
+  { "name": "Full ES5 Scope", "uri": "fulles5oop" },
   { "name": "New Keyword", "uri": "newkeyword" },
   { "name": "JS Prototype", "uri": "jsprototype" },
   { "name": "JS Prototype Constructor", "uri": "jsprototypeconstructor" },
@@ -33,5 +33,5 @@
   { "name": "Practical Promise Eg", "uri": "jspracticalpromiseexample" },
   { "name": "For Of Symbol Iterator", "uri": "forofsymboliterator" },
   { "name": "Symbol Iterator", "uri": "symboliterator" },
-  { "name": "Symbol/String Key m", "uri": "symbolstringkey" }
+  { "name": "Symbol/String Key", "uri": "symbolstringkey" }
 ]
