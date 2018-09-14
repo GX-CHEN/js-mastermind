@@ -64,8 +64,14 @@ class ButtonAppBar extends React.Component {
             onClose={this.handleClose}
             PaperProps={{ style: { width: 200 } }}
           >
+            <MenuItem
+              key="homepage"
+              onClick={() => window.open('https://gx-chen.github.io/homepage/index.html', '_blank')}
+            >
+              My Homepage
+            </MenuItem>
             <MenuItem key="code-source" onClick={() => window.open('https://github.com/GX-CHEN', '_blank')}>
-              Code (on Github)
+              My Github
             </MenuItem>
             <MenuItem
               key="email"
