@@ -8,18 +8,19 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 const styles = {
   list: { width: 260 },
+  sectionTitle: { fontWeight: 600 },
   fullList: { width: 'auto' },
 };
 
 function SideBar(props) {
-  const { classes, sidebarOpen, toggleSidebar, updateSelectedName, names } = props;
+  const { classes, sidebarOpen, toggleSidebar, updateSelectedName, uriArray } = props;
 
   const sideList = (
     <div className={classes.list}>
       <div>
-        {names.map(name => (
-          <ListItem button key={name} onClick={updateSelectedName(name)}>
-            <ListItemText primary={name} />
+        {uriArray.map(item => (
+          <ListItem button key={item.name} onClick={updateSelectedName(item.name)} selected={item.selected}>
+            <ListItemText primary={item.name} />
           </ListItem>
         ))}
       </div>
@@ -42,7 +43,7 @@ SideBar.propTypes = {
   toggleSidebar: PropTypes.func.isRequired,
   updateSelectedName: PropTypes.func.isRequired,
   sidebarOpen: PropTypes.bool.isRequired,
-  names: PropTypes.array.isRequired,
+  uriArray: PropTypes.array.isRequired,
 };
 
 export default withStyles(styles)(SideBar);

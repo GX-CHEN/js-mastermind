@@ -1,4 +1,4 @@
-import { generateMapFromUriData, getNamesFromUriData, setSelectedItem } from '../../util/processUriMap';
+import { generateMapFromUriData, setSelectedItem } from '../../util/processUriMap';
 
 describe('uri data array util functions test', () => {
   const mockUriData = [
@@ -13,11 +13,6 @@ describe('uri data array util functions test', () => {
       'Slice vs Splice': 'arrayslicesplice',
       setTimeOut: 'setTimeOut',
     });
-  });
-
-  it('test getNamesFromUriData', () => {
-    expect(getNamesFromUriData([])).toEqual([]);
-    expect(getNamesFromUriData(mockUriData)).toEqual(['Array basic APIs', 'Slice vs Splice', 'setTimeOut']);
   });
 
   it('test setSelectedItem', () => {

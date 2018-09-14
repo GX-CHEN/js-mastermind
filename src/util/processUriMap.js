@@ -6,10 +6,6 @@ export function generateMapFromUriData(uriData) {
   return uriMap;
 }
 
-export function getNamesFromUriData(uriData) {
-  return uriData.map(item => item.name);
-}
-
 export function setSelectedItem(uriData, selectedName) {
   return uriData.map(item => ({ ...item, selected: item.name === selectedName }));
 }

@@ -68,16 +68,16 @@ class ButtonAppBar extends React.Component {
               key="homepage"
               onClick={() => window.open('https://gx-chen.github.io/homepage/index.html', '_blank')}
             >
-              My Homepage
+              Author Homepage
             </MenuItem>
             <MenuItem key="code-source" onClick={() => window.open('https://github.com/GX-CHEN', '_blank')}>
-              My Github
+              Author Github
             </MenuItem>
             <MenuItem
               key="email"
               onClick={() => window.open('mailto:chengongxia1990@gmail.com?Subject=Hello%20Gongxia', '_top')}
             >
-              Email Me
+              Email Author
             </MenuItem>
           </Menu>
         </AppBar>
