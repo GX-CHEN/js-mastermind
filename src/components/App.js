@@ -10,10 +10,10 @@ class App extends React.Component {
     super(props);
     this.state = {
       sidebarOpen: true,
-      uriES5Array: setSelectedItem(uriData['ES5'], uriData['ES5'][0].name),
-      uriES6Array: setSelectedItem(uriData['ES6'], uriData['ES6'][0].name),
-      uriMap: { ...generateMapFromUriData(uriData['ES5']), ...generateMapFromUriData(uriData['ES6']) },
-      selectedName: uriData['ES5'][0].name,
+      uriES5Array: setSelectedItem(uriData.ES5, uriData.ES5[0].name),
+      uriES6Array: setSelectedItem(uriData.ES6, uriData.ES6[0].name),
+      uriMap: { ...generateMapFromUriData(uriData.ES5), ...generateMapFromUriData(uriData.ES6) },
+      selectedName: uriData.ES5[0].name,
     };
   }
 
