@@ -10,9 +10,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       sidebarOpen: true,
-      uriArray: setSelectedItem(uriData, uriData[0].name),
-      uriMap: generateMapFromUriData(uriData),
-      selectedName: uriData[0].name,
+      uriArray: setSelectedItem(uriData['ES5'], uriData['ES5'][0].name),
+      uriMap: generateMapFromUriData(uriData['ES5']),
+      selectedName: uriData['ES5'][0].name,
     };
   }
 
@@ -21,7 +21,8 @@ class App extends React.Component {
   };
 
   updateSelectedName = selectedName => () => {
-    this.setState({ selectedName, uriArray: setSelectedItem(uriData, selectedName) });
+    const { uriArray } = this.state;
+    this.setState({ selectedName, uriArray: setSelectedItem(uriArray, selectedName) });
   };
 
   render() {
