@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 
 import NestedList from './NestedList';
+import { setSelectedItem } from '../util/processUriMap';
 
 const styles = {
   list: { width: 260 },
@@ -12,13 +13,19 @@ const styles = {
 };
 
 function SideBar(props) {
-  const { classes, sidebarOpen, toggleSidebar, handleClickItem, uriES5Array, uriES6Array } = props;
+  const { classes, sidebarOpen, toggleSidebar, handleClickItem, uriData, selectedName } = props;
 
   const sideList = (
     <div className={classes.list}>
       <div>
-        <NestedList handleClickItem={handleClickItem} dataArray={uriES5Array} title="ES5 Tutorial" />
-        <NestedList handleClickItem={handleClickItem} dataArray={uriES6Array} title="ES6 Features" />
+        {Object.keys(uriData).map(key => (
+          <NestedList
+            handleClickItem={handleClickItem}
+            dataArray={setSelectedItem(uriData[key], selectedName)}
+            title="ES5 Tutorial"
+            key={key}
+          />
+        ))}
       </div>
     </div>
   );
@@ -39,8 +46,8 @@ SideBar.propTypes = {
   toggleSidebar: PropTypes.func.isRequired,
   handleClickItem: PropTypes.func.isRequired,
   sidebarOpen: PropTypes.bool.isRequired,
-  uriES5Array: PropTypes.array.isRequired,
-  uriES6Array: PropTypes.array.isRequired,
+  uriData: PropTypes.object.isRequired,
+  selectedName: PropTypes.string.isRequired,
 };
 
 export default withStyles(styles)(SideBar);

@@ -3,15 +3,13 @@ import Iframe from 'react-iframe';
 import Sidebar from './SideBar';
 import TopBar from './TopBar';
 import uriData from '../data/uriData.json';
-import { setSelectedItem, generateMapFromMapOfArray } from '../util/processUriMap';
+import { generateMapFromMapOfArray } from '../util/processUriMap';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       sidebarOpen: true,
-      uriES5Array: setSelectedItem(uriData.ES5, uriData.ES5[0].name),
-      uriES6Array: setSelectedItem(uriData.ES6, uriData.ES6[0].name),
       uriMap: generateMapFromMapOfArray(uriData),
       selectedName: uriData.ES5[0].name,
     };
@@ -22,17 +20,14 @@ class App extends React.Component {
   };
 
   handleClickItem = selectedName => () => {
-    const { uriES5Array, uriES6Array } = this.state;
     this.setState({
       selectedName,
-      uriES5Array: setSelectedItem(uriES5Array, selectedName),
-      uriES6Array: setSelectedItem(uriES6Array, selectedName),
       sidebarOpen: false,
     });
   };
 
   render() {
-    const { sidebarOpen, uriES5Array, uriES6Array, uriMap, selectedName } = this.state;
+    const { sidebarOpen, uriMap, selectedName } = this.state;
     return (
       <div className="App">
         <TopBar toggleSidebar={this.toggleSidebar} selectedName={selectedName} />
@@ -40,8 +35,8 @@ class App extends React.Component {
           sidebarOpen={sidebarOpen}
           toggleSidebar={this.toggleSidebar}
           handleClickItem={this.handleClickItem}
-          uriES5Array={uriES5Array}
-          uriES6Array={uriES6Array}
+          uriData={uriData}
+          selectedName={selectedName}
         />
         <Iframe
           height="calc(100% - 64px)"
