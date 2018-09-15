@@ -35,7 +35,7 @@ class NestedList extends React.Component {
     return (
       <div className={classes.root}>
         <List component="nav">
-          <ListItem button onClick={this.toggleCollapse}>
+          <ListItem button onClick={this.toggleCollapse} key={title}>
             <ListItemIcon>
               <Code />
             </ListItemIcon>
@@ -43,8 +43,8 @@ class NestedList extends React.Component {
             {open ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
           <Collapse in={open} timeout="auto" unmountOnExit>
-            {dataArray.map(item => (
-              <List component="div" disablePadding>
+            <List component="div" disablePadding>
+              {dataArray.map(item => (
                 <ListItem
                   button
                   className={classes.nested}
@@ -54,8 +54,8 @@ class NestedList extends React.Component {
                 >
                   <ListItemText primary={item.name} />
                 </ListItem>
-              </List>
-            ))}
+              ))}
+            </List>
           </Collapse>
         </List>
       </div>

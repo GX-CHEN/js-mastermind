@@ -9,3 +9,8 @@ export function generateMapFromUriData(uriData) {
 export function setSelectedItem(uriData, selectedName) {
   return uriData.map(item => ({ ...item, selected: item.name === selectedName }));
 }
+
+export function isSelectedItemInArray(uriArray) {
+  const filtered = uriArray.filter(item => item.selected);
+  return filtered.length !== 0;
+}
