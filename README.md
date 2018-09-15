@@ -8,4 +8,11 @@ https://gx-chen.github.io/javascriptic-js/index.html
 
 ## Tech Stack
 
-React (create-react-app), JavaScript ES6, Material-UI, repl.it embedded iframe
+- React (create-react-app)
+- JavaScript ES6
+- Material-UI
+- repl.it embedded iframe
+
+## Author
+
+Gongxia Chen (Github:@GX-CHEN)

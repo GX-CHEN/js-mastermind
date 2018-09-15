@@ -8,7 +8,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
-import StarBorder from '@material-ui/icons/StarBorder';
+import Code from '@material-ui/icons/Code';
 
 const styles = theme => ({
   root: {
@@ -37,7 +37,7 @@ class NestedList extends React.Component {
         <List component="nav">
           <ListItem button onClick={this.toggleCollapse}>
             <ListItemIcon>
-              <StarBorder />
+              <Code />
             </ListItemIcon>
             <ListItemText inset primary={title} />
             {open ? <ExpandLess /> : <ExpandMore />}
