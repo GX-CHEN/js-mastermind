@@ -9,6 +9,7 @@ import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Code from '@material-ui/icons/Code';
+import { isSelectedItemInArray } from '../util/processUriMap';
 
 const styles = theme => ({
   root: {
@@ -22,7 +23,11 @@ const styles = theme => ({
 });
 
 class NestedList extends React.Component {
-  state = { open: true };
+  constructor(props) {
+    super(props);
+    const { dataArray } = props;
+    this.state = { open: isSelectedItemInArray(dataArray) };
+  }
 
   toggleCollapse = () => {
     this.setState(state => ({ open: !state.open }));
