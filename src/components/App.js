@@ -3,7 +3,7 @@ import Iframe from 'react-iframe';
 import Sidebar from './SideBar';
 import TopBar from './TopBar';
 import uriData from '../data/uriData.json';
-import { generateMapFromUriData, setSelectedItem } from '../util/processUriMap';
+import { setSelectedItem, generateMapFromMapOfArray } from '../util/processUriMap';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class App extends React.Component {
       sidebarOpen: true,
       uriES5Array: setSelectedItem(uriData.ES5, uriData.ES5[0].name),
       uriES6Array: setSelectedItem(uriData.ES6, uriData.ES6[0].name),
-      uriMap: { ...generateMapFromUriData(uriData.ES5), ...generateMapFromUriData(uriData.ES6) },
+      uriMap: generateMapFromMapOfArray(uriData),
       selectedName: uriData.ES5[0].name,
     };
   }
