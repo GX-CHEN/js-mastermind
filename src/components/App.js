@@ -21,12 +21,13 @@ class App extends React.Component {
     this.setState({ sidebarOpen: open });
   };
 
-  updateSelectedName = selectedName => () => {
+  handleClickItem = selectedName => () => {
     const { uriES5Array, uriES6Array } = this.state;
     this.setState({
       selectedName,
       uriES5Array: setSelectedItem(uriES5Array, selectedName),
       uriES6Array: setSelectedItem(uriES6Array, selectedName),
+      sidebarOpen: false,
     });
   };
 
@@ -38,7 +39,7 @@ class App extends React.Component {
         <Sidebar
           sidebarOpen={sidebarOpen}
           toggleSidebar={this.toggleSidebar}
-          updateSelectedName={this.updateSelectedName}
+          handleClickItem={this.handleClickItem}
           uriES5Array={uriES5Array}
           uriES6Array={uriES6Array}
         />

@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import NestedList from './NestedList';
 
 const styles = {
   list: { width: 260 },
@@ -13,21 +12,13 @@ const styles = {
 };
 
 function SideBar(props) {
-  const { classes, sidebarOpen, toggleSidebar, updateSelectedName, uriES5Array, uriES6Array } = props;
+  const { classes, sidebarOpen, toggleSidebar, handleClickItem, uriES5Array, uriES6Array } = props;
 
   const sideList = (
     <div className={classes.list}>
       <div>
-        {uriES5Array.map(item => (
-          <ListItem button key={item.name} onClick={updateSelectedName(item.name)} selected={item.selected}>
-            <ListItemText primary={item.name} />
-          </ListItem>
-        ))}
-        {uriES6Array.map(item => (
-          <ListItem button key={item.name} onClick={updateSelectedName(item.name)} selected={item.selected}>
-            <ListItemText primary={item.name} />
-          </ListItem>
-        ))}
+        <NestedList handleClickItem={handleClickItem} dataArray={uriES5Array} title="ES5 Tutorial" />
+        <NestedList handleClickItem={handleClickItem} dataArray={uriES6Array} title="ES6 Features" />
       </div>
     </div>
   );
@@ -35,7 +26,7 @@ function SideBar(props) {
   return (
     <div>
       <Drawer open={sidebarOpen} onClose={toggleSidebar(false)}>
-        <div tabIndex={0} role="button" onClick={toggleSidebar(false)} onKeyDown={toggleSidebar(false)}>
+        <div tabIndex={0} role="button" onKeyDown={toggleSidebar(false)}>
           {sideList}
         </div>
       </Drawer>
@@ -46,7 +37,7 @@ function SideBar(props) {
 SideBar.propTypes = {
   classes: PropTypes.object.isRequired,
   toggleSidebar: PropTypes.func.isRequired,
-  updateSelectedName: PropTypes.func.isRequired,
+  handleClickItem: PropTypes.func.isRequired,
   sidebarOpen: PropTypes.bool.isRequired,
   uriES5Array: PropTypes.array.isRequired,
   uriES6Array: PropTypes.array.isRequired,
