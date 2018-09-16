@@ -5,7 +5,8 @@ body {
 }
 
 .iframe-wrapper {
-  max-width: 1000px;
+  max-width: 1024px;
+  min-width: 60%;
   text-align: center;
   margin: auto;
 }
