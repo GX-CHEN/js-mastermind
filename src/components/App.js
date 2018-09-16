@@ -12,7 +12,13 @@ class App extends React.Component {
       sidebarOpen: true,
       uriMap: generateMapFromMapOfArray(uriData),
       selectedName: uriData.ES5[0].name,
+      permanentSideBar: false,
     };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
   }
 
   toggleSidebar = open => () => {
@@ -26,8 +32,12 @@ class App extends React.Component {
     });
   };
 
+  handleResize = () => {
+    this.setState({ permanentSideBar: window.innerWidth > 1320 });
+  };
+
   render() {
-    const { sidebarOpen, uriMap, selectedName } = this.state;
+    const { sidebarOpen, uriMap, selectedName, permanentSideBar } = this.state;
     return (
       <div className="App">
         <TopBar toggleSidebar={this.toggleSidebar} selectedName={selectedName} />
@@ -37,20 +47,23 @@ class App extends React.Component {
           handleClickItem={this.handleClickItem}
           uriData={uriData}
           selectedName={selectedName}
+          permanentSideBar={permanentSideBar}
         />
-        <div className="iframe-wrapper">
-          <Iframe
-            position="relative"
-            height="calc(100vh - 64px)"
-            width="100%"
-            url={`https://repl.it/@GX_CHEN/${uriMap[selectedName]}?lite=true`}
-            scrolling="no"
-            frameborder="no"
-            allowtransparency="true"
-            allowfullscreen="true"
-            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
-          />
-        </div>
+        <main style={{ marginLeft: permanentSideBar ? 260 : 0 }}>
+          <div className="iframe-wrapper">
+            <Iframe
+              position="relative"
+              height="calc(100vh - 64px)"
+              width="100%"
+              url={`https://repl.it/@GX_CHEN/${uriMap[selectedName]}?lite=true`}
+              scrolling="no"
+              frameborder="no"
+              allowtransparency="true"
+              allowfullscreen="true"
+              sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+            />
+          </div>
+        </main>
       </div>
     );
   }

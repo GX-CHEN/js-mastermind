@@ -13,7 +13,7 @@ const styles = {
 };
 
 function SideBar(props) {
-  const { classes, sidebarOpen, toggleSidebar, handleClickItem, uriData, selectedName } = props;
+  const { classes, sidebarOpen, toggleSidebar, handleClickItem, uriData, selectedName, permanentSideBar } = props;
 
   const sideList = (
     <div className={classes.list}>
@@ -32,7 +32,7 @@ function SideBar(props) {
 
   return (
     <div>
-      <Drawer open={sidebarOpen} onClose={toggleSidebar(false)}>
+      <Drawer variant={permanentSideBar ? 'permanent' : 'temporary'} open={sidebarOpen} onClose={toggleSidebar(false)}>
         <div tabIndex={0} role="button" onKeyDown={toggleSidebar(false)}>
           {sideList}
         </div>
@@ -46,6 +46,7 @@ SideBar.propTypes = {
   toggleSidebar: PropTypes.func.isRequired,
   handleClickItem: PropTypes.func.isRequired,
   sidebarOpen: PropTypes.bool.isRequired,
+  permanentSideBar: PropTypes.bool.isRequired,
   uriData: PropTypes.object.isRequired,
   selectedName: PropTypes.string.isRequired,
 };
