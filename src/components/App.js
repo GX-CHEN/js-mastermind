@@ -38,16 +38,19 @@ class App extends React.Component {
           uriData={uriData}
           selectedName={selectedName}
         />
-        <Iframe
-          height="calc(100% - 64px)"
-          width="100%"
-          url={`https://repl.it/@GX_CHEN/${uriMap[selectedName]}?lite=true`}
-          scrolling="no"
-          frameborder="no"
-          allowtransparency="true"
-          allowfullscreen="true"
-          sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
-        />
+        <div className="iframe-wrapper">
+          <Iframe
+            position="relative"
+            height="calc(100vh - 64px)"
+            width="100%"
+            url={`https://repl.it/@GX_CHEN/${uriMap[selectedName]}?lite=true`}
+            scrolling="no"
+            frameborder="no"
+            allowtransparency="true"
+            allowfullscreen="true"
+            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"
+          />
+        </div>
       </div>
     );
   }
