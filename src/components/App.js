@@ -33,7 +33,7 @@ class App extends React.Component {
   };
 
   handleResize = () => {
-    this.setState({ permanentSideBar: window.innerWidth > 1320 });
+    this.setState({ permanentSideBar: window.innerWidth > 1160 });
   };
 
   render() {

@@ -18,6 +18,10 @@ https://javascripticjs.com
 - Material-UI
 - repl.it embedded iframe
 
+## License
+
+Standard MIT license which you can find here [LICENSE](./LICENSE).
+
 ## Author
 
 Gongxia Chen (Github:@GX-CHEN)
