@@ -11,7 +11,7 @@ class App extends React.Component {
     this.state = {
       sidebarOpen: true,
       uriMap: generateMapFromMapOfArray(uriData),
-      selectedName: uriData.ES5[0].name,
+      selectedName: uriData['JS Basics'][0].name,
       permanentSideBar: false,
     };
   }

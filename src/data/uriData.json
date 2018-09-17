@@ -1,5 +1,5 @@
 {
-  "Basics": [
+  "JS Basics": [
     { "name": "Array Basic APIs", "uri": "arraypushpopshiftunshift" },
     { "name": "Slice vs Splice", "uri": "arrayslicesplice" },
     { "name": "SetTimeOut", "uri": "setTimeOut" },
@@ -12,7 +12,7 @@
     { "name": "Function Chaining", "uri": "functionchaining" },
     { "name": "Function Overload", "uri": "functionoverload" }
   ],
-  "ES5": [
+  "ES5 Advanced": [
     { "name": "Closure Scope", "uri": "closurescope" },
     { "name": "Closure Function Factory", "uri": "closurefunctionfactory" },
     { "name": "Closure Count Func Calls", "uri": "closurecountfunctioncalls" },
@@ -26,7 +26,7 @@
     { "name": "JS Prototype", "uri": "jsprototype" },
     { "name": "JS Prototype Constructor", "uri": "jsprototypeconstructor" }
   ],
-  "ES6": [
+  "ES6 Features": [
     { "name": "Array Every Some", "uri": "arrayeverysome" },
     { "name": "Array Filter Find", "uri": "arrayfilterfind" },
     { "name": "Array Foreach Map", "uri": "arrayforeachmap" },
