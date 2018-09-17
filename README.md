@@ -9,6 +9,7 @@ JavaScript programming language tutorial which contains code snippets which help
 ## Deployed Website
 
 https://gx-chen.github.io/javascriptic-js/index.html
+https://javascripticjs.com
 
 ## Tech Stack
 

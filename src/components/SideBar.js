@@ -22,7 +22,7 @@ function SideBar(props) {
           <NestedList
             handleClickItem={handleClickItem}
             dataArray={setSelectedItem(uriData[key], selectedName)}
-            title="ES5 Tutorial"
+            title={`${key} Tutorials`}
             key={key}
           />
         ))}
