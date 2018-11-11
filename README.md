@@ -10,8 +10,8 @@
 
 ## Deployed Website
 
-Primary link: https://javascripticjs.com \
-Back-up link: https://gx-chen.github.io/javascriptic-js/index.html
+Primary link: https://jsmastermind.com \
+Back-up link: https://gx-chen.github.io/js-mastermind/index.html
 
 ## How to build
 

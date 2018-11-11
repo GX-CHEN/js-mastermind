@@ -75,7 +75,7 @@ class ButtonAppBar extends React.Component {
             </MenuItem>
             <MenuItem
               key="email"
-              onClick={() => window.open('mailto:chengongxia1990@gmail.com?Subject=From%20JavaScripticJS', '_top')}
+              onClick={() => window.open('mailto:chengongxia1990@gmail.com?Subject=From%20JSMastermind', '_top')}
             >
               Email Your Feedbacks
             </MenuItem>
