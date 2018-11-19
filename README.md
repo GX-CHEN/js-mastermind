@@ -1,8 +1,8 @@
-# JavaScript JS
+# JS Mastermind
 
 ## What is this?
 
-"JavaScript JS" is a JavaScript language tutorial, which contains code snippets help to learn JS, and write JS in "JavaScriptic" flavor.
+"JS Mastermind" is a JavaScript language tutorial, which contains code snippets help to learn JS, and write JS in "JavaScriptic" flavor.
 
 - Bite-size tutorial, ordered by easy-to-hard, basic-to-deep
 - Support real-time code execution. (Thanks to repl.it embedded API)
@@ -13,7 +13,11 @@
 Primary link: https://jsmastermind.com \
 Back-up link: https://gx-chen.github.io/js-mastermind/index.html
 
-## How to build
+## Install dependencies
+
+- `npm install` will install all dependencies, including dev dependencies (e.g. ESLint, prettier which can integrate with Text Editor)
+
+## How to run
 
 - `git clone` the code to local machine
 - Make sure NodeJS 8.x (or later), and npm 4.x (or later) is installed in the local machine
@@ -21,7 +25,16 @@ Back-up link: https://gx-chen.github.io/js-mastermind/index.html
 - Run `npm install`. After it's done, run `npm start`
 - Web App should now running on http://localhost:3000
 
-## Tech Stack
+## Production build
+
+- `npm run build` will generate optimized build for production
+
+## How to test
+
+- If you're using MacOS, make sure to install watchman first, easiest way is to use Homebrew `brew install watchman`. Windows or Linux don't need this step
+- Run `npm test`
+
+## Tech stack
 
 - React (from create-react-app)
 - JavaScript ES6
