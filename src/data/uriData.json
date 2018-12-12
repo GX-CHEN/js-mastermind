@@ -37,6 +37,10 @@
     { "name": "Practical Promise Eg", "uri": "jspracticalpromiseexample" },
     { "name": "For Of Symbol Iterator", "uri": "forofsymboliterator" },
     { "name": "Symbol Iterator", "uri": "symboliterator" },
-    { "name": "Symbol/String Key", "uri": "symbolstringkey" }
+    { "name": "Symbol/String Key", "uri": "symbolstringkey" },
+    { "name": "Map Basics", "uri": "mapbasics" },
+    { "name": "Set Basics", "uri": "setbasics" },
+    { "name": "Set Iteration", "uri": "setiteration" },
+    { "name": "Template Strings", "uri": "templatestrings" }
   ]
 }
