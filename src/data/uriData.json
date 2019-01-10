@@ -42,5 +42,11 @@
     { "name": "Set Basics", "uri": "setbasics" },
     { "name": "Set Iteration", "uri": "setiteration" },
     { "name": "Template Strings", "uri": "templatestrings" }
+  ],
+  "Advanced Topics": [
+    { "name": "Debounce", "uri": "debounce" },
+    { "name": "Throttle", "uri": "throttle" },
+    { "name": "Private Closure", "uri": "privateclosure" },
+    { "name": "Private Closure Class", "uri": "privateclosureclass" }
   ]
 }
