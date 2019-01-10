@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/GX-CHEN/js-mastermind.svg?branch=master)](https://travis-ci.com/GX-CHEN/js-mastermind)
+
 # JS Mastermind
 
 ## What is this?
