@@ -8,14 +8,14 @@
   "dependencies": {
     "@material-ui/core": "^3.0.3",
     "@material-ui/icons": "^3.0.1",
-    "enzyme": "^3.6.0",
-    "enzyme-adapter-react-16": "^1.5.0",
-    "prop-types": "^15.6.2",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0",
-    "react-iframe": "^1.2.0",
-    "react-scripts": "2.1.1",
-    "react-test-renderer": "^16.5.1"
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-iframe": "^1.8.0",
+    "react-scripts": "3.1.1",
+    "react-test-renderer": "^16.9.0"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -27,11 +27,11 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1",
-    "gh-pages": "^2.0.1"
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "gh-pages": "^2.1.1"
   },
   "jest": {
     "collectCoverageFrom": [
