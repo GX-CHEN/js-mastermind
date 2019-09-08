@@ -9,4 +9,5 @@ body {
   min-width: 60%;
   text-align: center;
   margin: auto;
+  height: calc(100vh - 64px);
 }

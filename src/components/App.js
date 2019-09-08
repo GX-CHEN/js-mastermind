@@ -53,7 +53,7 @@ class App extends React.Component {
           <div className="iframe-wrapper">
             <Iframe
               position="relative"
-              height="calc(100vh - 64px)"
+              height="100%"
               width="100%"
               url={`https://repl.it/@GX_CHEN/${uriMap[selectedName]}?lite=true`}
               scrolling="no"
