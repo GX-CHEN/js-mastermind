@@ -17,17 +17,25 @@
 ## Chapter & tutorial layout
 Note: Completed one are marked as ~~strike out~~
 ## JS Basics
+* Primitive data-type
+* Type casting
+* Math & caveat
+* Array & Object
 * ~~Array Basic APIs~~
 * ~~Slice vs Splice~~
-* ~~SetTimeOut~~
 * ~~Object Key~~
 * ~~Object Literal~~
+* Loop basics
+* Loop through array
+* Loop through object
 * ~~This Keyword In Object~~
 * ~~3 Ways Create Object~~
 * ~~New Keyword~~
 * ~~Apply Call Bind~~
 * ~~Function Chaining~~
 * ~~Function Overload~~
+* ~~SetTimeOut~~
+* SetInterval
   
 ### ES5 Advanced
 * ~~Closure Scope~~
@@ -39,7 +47,7 @@ Note: Completed one are marked as ~~strike out~~
 * ~~Self Scope~~
 * ~~By Value/Reference~~
 * ~~Function Are Objects~~
-* ~~Full ES5 OOP~~
+* ~~Pure ES5 OOP~~
 * ~~JS Prototype~~
 * ~~JS Prototype Constructor~~
 
@@ -49,6 +57,8 @@ Note: Completed one are marked as ~~strike out~~
 * ~~Array Foreach Map~~
 * ~~Array Reduce~~
 * ~~Array Reduce Example~~
+* Array De-structure
+* Object De-structure
 * ~~Enhanced ES6 Class~~
 * ~~JS Basic Promise~~
 * ~~Practical Promise Eg~~
