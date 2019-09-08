@@ -1,13 +1,13 @@
 {
-  "main.css": "/js-mastermind/static/css/main.3f085677.chunk.css",
-  "main.js": "/js-mastermind/static/js/main.b368488c.chunk.js",
-  "main.js.map": "/js-mastermind/static/js/main.b368488c.chunk.js.map",
+  "main.css": "/js-mastermind/static/css/main.d90d055a.chunk.css",
+  "main.js": "/js-mastermind/static/js/main.9b0aff59.chunk.js",
+  "main.js.map": "/js-mastermind/static/js/main.9b0aff59.chunk.js.map",
   "static/js/1.4cd8fa39.chunk.js": "/js-mastermind/static/js/1.4cd8fa39.chunk.js",
   "static/js/1.4cd8fa39.chunk.js.map": "/js-mastermind/static/js/1.4cd8fa39.chunk.js.map",
   "runtime~main.js": "/js-mastermind/static/js/runtime~main.56f87f19.js",
   "runtime~main.js.map": "/js-mastermind/static/js/runtime~main.56f87f19.js.map",
-  "static/css/main.3f085677.chunk.css.map": "/js-mastermind/static/css/main.3f085677.chunk.css.map",
+  "static/css/main.d90d055a.chunk.css.map": "/js-mastermind/static/css/main.d90d055a.chunk.css.map",
   "index.html": "/js-mastermind/index.html",
-  "precache-manifest.c9dc96236bba7885a9138d4307b2204f.js": "/js-mastermind/precache-manifest.c9dc96236bba7885a9138d4307b2204f.js",
+  "precache-manifest.82b6e77e3b267dc43a1c94db049feb1b.js": "/js-mastermind/precache-manifest.82b6e77e3b267dc43a1c94db049feb1b.js",
   "service-worker.js": "/js-mastermind/service-worker.js"
 }

@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "b368488c0162e8a37684",
-    "url": "/js-mastermind/static/css/main.3f085677.chunk.css"
+    "revision": "9b0aff59b909b1e76676",
+    "url": "/js-mastermind/static/css/main.d90d055a.chunk.css"
   },
   {
-    "revision": "b368488c0162e8a37684",
-    "url": "/js-mastermind/static/js/main.b368488c.chunk.js"
+    "revision": "9b0aff59b909b1e76676",
+    "url": "/js-mastermind/static/js/main.9b0aff59.chunk.js"
   },
   {
     "revision": "4cd8fa392a10a28a3ca8",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/js-mastermind/static/js/runtime~main.56f87f19.js"
   },
   {
-    "revision": "caf5044d35a4e443245ef94273374f9a",
+    "revision": "47d112892e4e4109ae44ab82e43c3436",
     "url": "/js-mastermind/index.html"
   }
 ];
