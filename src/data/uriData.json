@@ -1,19 +1,24 @@
 {
   "JS Basics": [
     { "name": "Primitive Data-types", "uri": "primitive-data-types" },
-    { "name": "{Primitive casting", "uri": "primitive-casting" },
+    { "name": "Primitive casting", "uri": "primitive-casting" },
     { "name": "Math Caveat", "uri": "math-caveat" },
+    { "name": "Array Basics", "uri": "array-basics" },
+    { "name": "Object Basics", "uri": "object-basics" },
     { "name": "Array Basic APIs", "uri": "array-push-pop-shift-unshift" },
     { "name": "Slice vs Splice", "uri": "array-slice-splice" },
     { "name": "Object Key", "uri": "object-key" },
     { "name": "Object Literal", "uri": "object-literal" },
+    { "name": "Loop Array", "uri": "loop-array" },
+    { "name": "Loop Object", "uri": "loop-object" },
     { "name": "This Keyword In Object", "uri": "this-keyword-in-object" },
     { "name": "3 Ways Create Object", "uri": "three-way-for-object-creation" },
     { "name": "New Keyword", "uri": "new-keyword" },
     { "name": "Apply Call Bind", "uri": "apply-call-bind" },
     { "name": "Function Chaining", "uri": "function-chaining" },
     { "name": "Function Overload", "uri": "function-overload" },
-    { "name": "SetTimeOut", "uri": "setTimeOut" }
+    { "name": "SetTimeOut", "uri": "setTimeOut" },
+    { "name": "SetInterval", "uri": "SetInterval" }
   ],
   "ES5 Advanced": [
     { "name": "Closure Scope", "uri": "closure-scope" },

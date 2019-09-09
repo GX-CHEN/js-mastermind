@@ -22,14 +22,12 @@ Note: Completed one are marked as ~~strike out~~
 * ~~Math & caveat~~
 * Array Basics
 * Object Basics
-* Object vs Array
 * ~~Array Basic APIs~~
 * ~~Slice vs Splice~~
 * ~~Object Key~~
 * ~~Object Literal~~
-* Loop basics
-* Loop through array
-* Loop through object
+* Loop array
+* Loop object
 * ~~This Keyword In Object~~
 * ~~3 Ways Create Object~~
 * ~~New Keyword~~
