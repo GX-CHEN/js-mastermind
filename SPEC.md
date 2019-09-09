@@ -17,17 +17,17 @@
 ## Chapter & tutorial layout
 Note: Completed one are marked as ~~strike out~~
 ## JS Basics
-* Primitive data-type
-* Type casting
-* Math & caveat
-* Array & Object
+* ~~Primitive data-type~~
+* ~~Primitive casting~~
+* ~~Math & caveat~~
+* Array Basics
+* Object Basics
 * ~~Array Basic APIs~~
 * ~~Slice vs Splice~~
 * ~~Object Key~~
 * ~~Object Literal~~
-* Loop basics
-* Loop through array
-* Loop through object
+* Loop array
+* Loop object
 * ~~This Keyword In Object~~
 * ~~3 Ways Create Object~~
 * ~~New Keyword~~
@@ -57,8 +57,8 @@ Note: Completed one are marked as ~~strike out~~
 * ~~Array Foreach Map~~
 * ~~Array Reduce~~
 * ~~Array Reduce Example~~
-* Array De-structure
-* Object De-structure
+* ~~Array Destructure~~
+* ~~Object Destructure~~
 * ~~Enhanced ES6 Class~~
 * ~~JS Basic Promise~~
 * ~~Practical Promise Eg~~

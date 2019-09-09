@@ -14,7 +14,7 @@ import { isSelectedItemInArray } from '../util/processUriMap';
 const styles = theme => ({
   root: {
     width: '100%',
-    maxWidth: 360,
+    maxWidth: 392,
     backgroundColor: theme.palette.background.paper,
   },
   nested: {
