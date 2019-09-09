@@ -1,5 +1,8 @@
 {
   "JS Basics": [
+    { "name": "Primitive Data-types", "uri": "primitive-data-types" },
+    { "name": "{Primitive casting", "uri": "primitive-casting" },
+    { "name": "Math Caveat", "uri": "math-caveat" },
     { "name": "Array Basic APIs", "uri": "array-push-pop-shift-unshift" },
     { "name": "Slice vs Splice", "uri": "array-slice-splice" },
     { "name": "Object Key", "uri": "object-key" },
@@ -32,6 +35,8 @@
     { "name": "Array Foreach Map", "uri": "array-foreach-map" },
     { "name": "Array Reduce", "uri": "array-reduce" },
     { "name": "Array Reduce Example", "uri": "array-reduce-match-brace-example" },
+    { "name": "Array Destructure", "uri": "array-destructure" },
+    { "name": "Object Destructure", "uri": "object-destructure" },
     { "name": "Enhanced ES6 Class", "uri": "enhanced-es6-class" },
     { "name": "JS Basic Promise", "uri": "js-basic-promise" },
     { "name": "Practical Promise Eg", "uri": "js-practical-promise-example" },
