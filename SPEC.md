@@ -20,8 +20,8 @@ Note: Completed one are marked as ~~strike out~~
 * ~~Primitive data-type~~
 * ~~Primitive casting~~
 * ~~Math & caveat~~
-* Array Basics
-* Object Basics
+* ~~Array Basics~~
+* ~~Object Basics~~
 * ~~Array Basic APIs~~
 * ~~Slice vs Splice~~
 * ~~Object Key~~
@@ -35,7 +35,7 @@ Note: Completed one are marked as ~~strike out~~
 * ~~Function Chaining~~
 * ~~Function Overload~~
 * ~~SetTimeOut~~
-* SetInterval
+* ~~SetInterval~~
   
 ### ES5 Advanced
 * ~~Closure Scope~~
