@@ -3,7 +3,7 @@ import Iframe from 'react-iframe';
 import Sidebar from './SideBar';
 import TopBar from './TopBar';
 import uriData from '../data/uriData.json';
-import { generateMapFromMapOfArray } from '../util/processUriMap';
+import { generateMapFromMapOfArray, generatedSwapFromMapOfArray } from '../util/processUriMap';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,6 +11,7 @@ class App extends React.Component {
     this.state = {
       sidebarOpen: true,
       uriMap: generateMapFromMapOfArray(uriData),
+      swapUriMap: generatedSwapFromMapOfArray(uriData),
       selectedName: uriData['JS Basics'][0].name,
       permanentSideBar: false,
     };
@@ -19,6 +20,12 @@ class App extends React.Component {
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
+    const urlParams = new URLSearchParams(window.location.search);
+    const uri = urlParams.get('id');
+    const { swapUriMap } = this.state;
+    if (uri) {
+      this.setState({ selectedName: swapUriMap[uri] });
+    }
   }
 
   toggleSidebar = open => () => {
@@ -30,6 +37,8 @@ class App extends React.Component {
       selectedName,
       sidebarOpen: false,
     });
+    const { uriMap } = this.state;
+    window.location = `${window.location.origin}?id=${uriMap[selectedName]}`;
   };
 
   handleResize = () => {
