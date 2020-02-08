@@ -25,6 +25,11 @@ export function generateMapFromMapOfArray(mapOfArray) {
   return result;
 }
 
+export function generatedSwapFromMapOfArray(mapOfArray) {
+  const obj = generateMapFromMapOfArray(mapOfArray);
+  return Object.assign({}, ...Object.entries(obj).map(([a, b]) => ({ [b]: a })));
+}
+
 export function setSelectedItem(uriArray, selectedName) {
   return uriArray.map(item => ({ ...item, selected: item.name === selectedName }));
 }
