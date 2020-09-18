@@ -38,7 +38,7 @@ class App extends React.Component {
       sidebarOpen: false,
     });
     const { uriMap } = this.state;
-    window.location = `${window.location.origin}?id=${uriMap[selectedName]}`;
+    window.location = `${window.location.origin}/js-mastermind/?id=${uriMap[selectedName]}`;
   };
 
   handleResize = () => {

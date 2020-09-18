@@ -12,8 +12,7 @@
 
 ## Deployed Website
 
-Primary link: https://jsmastermind.com \
-Back-up link: https://gx-chen.github.io/js-mastermind/index.html
+Link: https://gx-chen.github.io/js-mastermind/
 
 ## Install dependencies
 
